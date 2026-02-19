@@ -1,0 +1,39 @@
+:root {
+  --color-primario: #141432;
+  --color-secundario: #c9a84c;
+  --color-acento: #e63946;
+  --color-fondo: #0b0b1a;
+  --color-fondo-card: #1c1c3a;
+  --color-texto: #ffffff;
+  --color-texto-secundario: #b0b0b0;
+  --color-borde: #2a2a4a;
+
+  --font-titulo: 'Segoe UI', 'Arial Black', sans-serif;
+  --font-texto: 'Segoe UI', Arial, sans-serif;
+
+  font-family: var(--font-texto);
+  line-height: 1.5;
+  color: var(--color-texto);
+  background-color: var(--color-fondo);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  min-width: 320px;
+}
+
+a {
+  color: var(--color-secundario);
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
