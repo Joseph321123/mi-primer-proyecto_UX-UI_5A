@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "title": "Intensamente 3",
+    "image": "https://lumiere-a.akamaihd.net/v1/images/ayuda_poster_a657c33f.jpeg",
+    "descripcion": "Riley enfrenta nuevas emociones mientras navega los desafíos de la vida adulta joven."
+  },
+  {
+    "id": 2,
+    "title": "Misión Imposible: Sentencia Final",
+    "image": "https://lumiere-a.akamaihd.net/v1/images/ayuda_poster_a657c33f.jpeg",
+    "descripcion": "Ethan Hunt se enfrenta a su misión más peligrosa contra una inteligencia artificial."
+  },
+  {
+    "id": 3,
+    "title": "Jurassic World: Renacimiento",
+    "image": "https://lumiere-a.akamaihd.net/v1/images/ayuda_poster_a657c33f.jpeg",
+    "descripcion": "Los dinosaurios regresan en una nueva aventura que cambiará el mundo para siempre."
+  }
+]

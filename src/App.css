@@ -196,6 +196,148 @@
   transform: scale(1.03);
 }
 
+/* ===== ACCIONES DE TARJETA (botones dentro de MovieCard) ===== */
+.movie-card-acciones {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.movie-card-descripcion {
+  color: var(--color-texto-secundario);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-top: 8px;
+  padding: 8px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+}
+
+/* ===== BOTÓN SECUNDARIO (ver sinopsis) ===== */
+.btn-secundario {
+  background-color: transparent;
+  border: 1px solid var(--color-secundario);
+  color: var(--color-secundario);
+  font-size: 0.85rem;
+  padding: 4px 12px;
+}
+
+.btn-secundario:hover {
+  background-color: var(--color-secundario);
+  color: var(--color-primario);
+}
+
+/* ===== BOTÓN FAVORITO ===== */
+.btn-favorito {
+  background: none;
+  border: 1px solid var(--color-borde);
+  color: var(--color-texto-secundario);
+  padding: 4px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: all 0.3s;
+}
+
+.btn-favorito:hover {
+  border-color: var(--color-secundario);
+  color: var(--color-secundario);
+}
+
+.btn-favorito.activo {
+  background-color: var(--color-secundario);
+  color: var(--color-primario);
+  border-color: var(--color-secundario);
+  font-weight: 600;
+}
+
+/* ===== LISTA DE FAVORITOS ===== */
+.favoritos-lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.favorito-tag {
+  background-color: var(--color-secundario);
+  color: var(--color-primario);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* ===== FORMULARIO ===== */
+.formulario {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.formulario-campo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.formulario-campo label {
+  color: var(--color-texto);
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.formulario-campo input {
+  padding: 10px 14px;
+  border: 1px solid var(--color-borde);
+  border-radius: 4px;
+  background-color: var(--color-fondo-card);
+  color: var(--color-texto);
+  font-size: 1rem;
+  font-family: var(--font-texto);
+  transition: border-color 0.3s;
+}
+
+.formulario-campo input::placeholder {
+  color: var(--color-texto-secundario);
+}
+
+.formulario-campo input:focus {
+  outline: none;
+  border-color: var(--color-secundario);
+}
+
+.formulario-resultado {
+  margin-top: 20px;
+  padding: 16px;
+  background-color: var(--color-fondo-card);
+  border: 1px solid var(--color-secundario);
+  border-radius: 8px;
+  max-width: 500px;
+}
+
+.formulario-resultado h4 {
+  color: var(--color-secundario);
+  font-family: var(--font-titulo);
+  margin-bottom: 8px;
+}
+
+.formulario-resultado p {
+  color: var(--color-texto);
+  font-size: 0.95rem;
+  margin-bottom: 4px;
+}
+
+/* ===== TEXTO CARGANDO ===== */
+.texto-cargando {
+  text-align: center;
+  color: var(--color-texto-secundario);
+  padding: 24px;
+  font-size: 1.1rem;
+}
+
 /* ===== DETALLE ===== */
 .detalle-pagina {
   padding: 32px 24px;
