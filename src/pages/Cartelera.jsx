@@ -9,25 +9,25 @@ function Cartelera({ cambiarVista }) {
     {
       id: 1,
       title: "Shingeki No Kyojin: The Final Season",
-      image: "https://lumiere-a.akamaihd.net/v1/images/ayuda_poster_a657c33f.jpeg",
+      image: "https://m.media-amazon.com/images/I/817GDELSS9L._AC_UF894,1000_QL80_.jpg",
       descripcion: "La batalla final entre Eren y sus compañeros define el destino de la humanidad en esta épica conclusión."
     },
     {
       id: 2,
       title: "Bob Esponja: Al Rescate",
-      image: "https://lumiere-a.akamaihd.net/v1/images/ayuda_poster_a657c33f.jpeg",
+      image: "https://m.media-amazon.com/images/M/MV5BNjAyZDQwOTktZjc0Yi00MzNjLWI1NmUtODI2ZjJmYWRjOTA3XkEyXkFqcGc@._V1_.jpg",
       descripcion: "Bob Esponja y sus amigos se embarcan en una aventura para rescatar a Gary, su querido caracol."
     },
     {
       id: 3,
       title: "Avatar: Fuego y Cenizas",
-      image: "https://lumiere-a.akamaihd.net/v1/images/ayuda_poster_a657c33f.jpeg",
+      image: "https://lumiere-a.akamaihd.net/v1/images/baja_integrado_vert_payoff_avatar_3_788f92d9.jpeg",
       descripcion: "Jake Sully enfrenta una nueva amenaza que pone en peligro a todo Pandora en esta tercera entrega."
     },
     {
       id: 4,
       title: "Minecraft: La Película",
-      image: "https://lumiere-a.akamaihd.net/v1/images/ayuda_poster_a657c33f.jpeg",
+      image: "https://m.media-amazon.com/images/M/MV5BYzFjMzNjOTktNDBlNy00YWZhLWExYTctZDcxNDA4OWVhOTJjXkEyXkFqcGc@._V1_.jpgg",
       descripcion: "Un grupo de aventureros es transportado al mundo de Minecraft y debe sobrevivir a sus peligros."
     }
   ]
