@@ -1,20 +1,58 @@
-[
-  {
-    "id": 1,
-    "title": "Intensamente 3",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSi3pBiREzaIcL7PsaeTWI1gy_IPeIxkKa6OQ&s",
-    "descripcion": "Riley enfrenta nuevas emociones mientras navega los desafíos de la vida adulta joven."
-  },
-  {
-    "id": 2,
-    "title": "Misión Imposible: Sentencia Final",
-    "image": "https://m.media-amazon.com/images/M/MV5BMjQ3MzNlOTEtNGU5ZS00ODI0LTgxNDctMjA4MTUxMjY4NTU0XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-    "descripcion": "Ethan Hunt se enfrenta a su misión más peligrosa contra una inteligencia artificial."
-  },
-  {
-    "id": 3,
-    "title": "Jurassic World: Renacimiento",
-    "image": "https://www.aceprensa.com/wp-content/uploads/2025/07/jurassic-world-rebirth.jpg",
-    "descripcion": "Los dinosaurios regresan en una nueva aventura que cambiará el mundo para siempre."
-  }
-]
+{
+  "peliculas": [
+    {
+      "id": 1,
+      "title": "Avatar: Fuego y Cenizas",
+      "image": "https://lumiere-a.akamaihd.net/v1/images/ayuda_poster_a657c33f.jpeg",
+      "descripcion": "Jake Sully enfrenta una nueva amenaza que pone en peligro a todo Pandora en esta tercera entrega."
+    },
+    {
+      "id": 2,
+      "title": "¡Ayuda!",
+      "image": "https://lumiere-a.akamaihd.net/v1/images/ayuda_poster_a657c33f.jpeg",
+      "descripcion": "Una familia enfrenta situaciones inesperadas en esta comedia llena de sorpresas."
+    },
+    {
+      "id": 3,
+      "title": "Arco",
+      "image": "https://m.media-amazon.com/images/M/MV5BM2IzNjdiNzUtNTJjMy00Mjk5LTg3MzItNzA2ZjYzOWE2MGIyXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+      "descripcion": "Un viaje emocional a través del tiempo que conecta pasado y presente."
+    },
+    {
+      "id": 4,
+      "title": "Shingeki No Kyojin: The Final Season",
+      "image": "https://lumiere-a.akamaihd.net/v1/images/ayuda_poster_a657c33f.jpeg",
+      "descripcion": "La batalla final entre Eren y sus compañeros define el destino de la humanidad en esta épica conclusión."
+    },
+    {
+      "id": 5,
+      "title": "Bob Esponja: Al Rescate",
+      "image": "https://lumiere-a.akamaihd.net/v1/images/baja_integrado_vert_payoff_avatar_3_788f92d9.jpeg?region=0%2C0%2C1226%2C1811",
+      "descripcion": "Bob Esponja y sus amigos se embarcan en una aventura para rescatar a Gary, su querido caracol."
+    },
+    {
+      "id": 6,
+      "title": "Minecraft: La Película",
+      "image": "https://lumiere-a.akamaihd.net/v1/images/ayuda_poster_a657c33f.jpeg",
+      "descripcion": "Un grupo de aventureros es transportado al mundo de Minecraft y debe sobrevivir a sus peligros."
+    }
+  ],
+  "carousel": [
+    {
+      "title": "ESTRENO: Avatar",
+      "image": "https://lumiere-a.akamaihd.net/v1/images/baja_integrado_vert_payoff_avatar_3_788f92d9.jpeg?region=0%2C0%2C1226%2C1811"
+    },
+    {
+      "title": "ESTRENO: ¡Ayuda!",
+      "image": "https://lumiere-a.akamaihd.net/v1/images/ayuda_poster_a657c33f.jpeg"
+    },
+    {
+      "title": "ESTRENO: Arco",
+      "image": "https://m.media-amazon.com/images/M/MV5BM2IzNjdiNzUtNTJjMy00Mjk5LTg3MzItNzA2ZjYzOWE2MGIyXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
+    },
+    {
+      "title": "ESTRENO: Shingeki",
+      "image": "https://lumiere-a.akamaihd.net/v1/images/ayuda_poster_a657c33f.jpeg"
+    }
+  ]
+}

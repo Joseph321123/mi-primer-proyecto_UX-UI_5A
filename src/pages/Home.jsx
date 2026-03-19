@@ -1,59 +1,74 @@
-import { useState, useEffect } from "react"
+import { useEffect, useState } from "react"
+import { useNavigate } from "react-router-dom"
 import MovieCard from "../components/MovieCard"
+import MovieCarousel from "../components/MovieCarousel"
 
-function Home({ cambiarVista }) {
-  // useEffect + fetch: carga películas sugeridas desde un JSON local
-  const [sugeridas, setSugeridas] = useState([])
+function Home() {
+  const navigate = useNavigate()
+
+  const [peliculas, setPeliculas] = useState([])
+  const [carousel, setCarousel] = useState([])
   const [cargando, setCargando] = useState(true)
 
   useEffect(() => {
     fetch("/peliculas-sugeridas.json")
-      .then(respuesta => respuesta.json())
-      .then(datos => {
-        setSugeridas(datos)
+      .then((respuesta) => respuesta.json())
+      .then((datos) => {
+        const peliculasData = datos.peliculas ?? []
+        const carouselData = datos.carousel ?? []
+        setPeliculas(peliculasData)
+        setCarousel(carouselData)
         setCargando(false)
       })
   }, [])
 
+  const idsEstrenos = [1, 2, 3]
+  const estrenos = peliculas.filter((p) => idsEstrenos.includes(p.id))
+  const sugeridas = peliculas.filter((p) => !idsEstrenos.includes(p.id))
+
   return (
     <>
+      {/* Carrusel de “ESTRENOS” (usa la sección carousel del JSON) */}
+      <section
+        style={{
+          maxWidth: "420px",
+          margin: "0 auto",
+          padding: "16px"
+        }}
+      >
+        <h2>ESTRENOS</h2>
+        <MovieCarousel movies={carousel} />
+      </section>
+
       <h2 className="pagina-titulo">Estrenos</h2>
-      <main className="grid-pagina">
-        <MovieCard
-          title="Avatar: Fuego y Cenizas"
-          image="https://lumiere-a.akamaihd.net/v1/images/baja_integrado_vert_payoff_avatar_3_788f92d9.jpeg"
-          descripcion="Jake Sully enfrenta una nueva amenaza que pone en peligro a todo Pandora."
-          onVerDetalle={() => cambiarVista("detalle")}
-        />
-
-        <MovieCard
-          title="¡Ayuda!"
-          image="https://lumiere-a.akamaihd.net/v1/images/ayuda_poster_a657c33f.jpeg"
-          descripcion="Una familia enfrenta situaciones inesperadas en esta comedia llena de sorpresas."
-          onVerDetalle={() => cambiarVista("detalle")}
-        />
-
-        <MovieCard
-          title="Arco"
-          image="https://m.media-amazon.com/images/M/MV5BM2IzNjdiNzUtNTJjMy00Mjk5LTg3MzItNzA2ZjYzOWE2MGIyXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
-          descripcion="Un viaje emocional a través del tiempo que conecta pasado y presente."
-          onVerDetalle={() => cambiarVista("detalle")}
-        />
-      </main>
-
-      {/* Sección dinámica: películas sugeridas cargadas con useEffect */}
-      <h2 className="pagina-titulo">Películas Sugeridas</h2>
       {cargando ? (
-        <p className="texto-cargando">Cargando sugerencias...</p>
+        <p className="texto-cargando">Cargando estrenos...</p>
       ) : (
         <main className="grid-pagina">
-          {sugeridas.map(pelicula => (
+          {estrenos.map((pelicula) => (
             <MovieCard
               key={pelicula.id}
               title={pelicula.title}
               image={pelicula.image}
               descripcion={pelicula.descripcion}
-              onVerDetalle={() => cambiarVista("detalle")}
+              onVerDetalle={() => navigate(`/pelicula/${pelicula.id}`)}
+            />
+          ))}
+        </main>
+      )}
+
+      <h2 className="pagina-titulo">Películas Sugeridas</h2>
+      {cargando ? (
+        <p className="texto-cargando">Cargando sugerencias...</p>
+      ) : (
+        <main className="grid-pagina">
+          {(sugeridas.length ? sugeridas : peliculas).map((pelicula) => (
+            <MovieCard
+              key={pelicula.id}
+              title={pelicula.title}
+              image={pelicula.image}
+              descripcion={pelicula.descripcion}
+              onVerDetalle={() => navigate(`/pelicula/${pelicula.id}`)}
             />
           ))}
         </main>

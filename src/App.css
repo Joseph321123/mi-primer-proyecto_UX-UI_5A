@@ -39,6 +39,12 @@
   color: var(--color-secundario);
 }
 
+.header-link.active {
+  color: var(--color-secundario);
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
 /* ===== CONTENEDOR PRINCIPAL (GRID DE PÁGINAS) ===== */
 .grid-pagina {
   max-width: 1200px;

@@ -1,5 +1,3 @@
-import { useState } from "react"
-
 import './App.css'
 
 import Header from "./components/Header"
@@ -9,19 +7,30 @@ import Cartelera from "./pages/Cartelera"
 import Detalle from "./pages/Detalle"
 import Alimento from "./pages/Alimento"
 import Otros from "./pages/Otros"
+import Boletos from "./pages/Boletos"
+import { Routes, Route } from "react-router-dom"
 
 function App() {
-  const [vistaActual, setVistaActual] = useState("home")
-
   return (
     <div style={{ minHeight: "100vh" }}>
-      <Header cambiarVista={setVistaActual} />
+      <Header />
 
-      {vistaActual === "home" && <Home cambiarVista={setVistaActual} />}
-      {vistaActual === "cartelera" && <Cartelera cambiarVista={setVistaActual} />}
-      {vistaActual === "detalle" && <Detalle />}
-      {vistaActual === "Alimento" && <Alimento />}
-      {vistaActual === "otros" && <Otros />}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/cartelera" element={<Cartelera />} />
+        <Route path="/alimentos" element={<Alimento />} />
+        <Route path="/otros" element={<Otros />} />
+        <Route path="/pelicula/:id" element={<Detalle />} />
+        <Route path="/boletos" element={<Boletos />} />
+        <Route
+          path="*"
+          element={
+            <main className="detalle-pagina">
+              <h2>404 - Página no encontrada</h2>
+            </main>
+          }
+        />
+      </Routes>
     </div>
   )
 }
