@@ -28,15 +28,9 @@ function Home() {
 
   return (
     <>
-      {/* Carrusel de “ESTRENOS” (usa la sección carousel del JSON) */}
-      <section
-        style={{
-          maxWidth: "420px",
-          margin: "0 auto",
-          padding: "16px"
-        }}
-      >
-        <h2>ESTRENOS</h2>
+      {/* Carrusel de “ESTRENOS” (usa la sección carousel del JSON); ancho completo, letterbox negro */}
+      <section className="movie-carousel-seccion">
+        <h2 className="seccion-titulo movie-carousel-seccion-titulo">ESTRENOS</h2>
         <MovieCarousel movies={carousel} />
       </section>
 

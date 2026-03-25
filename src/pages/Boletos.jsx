@@ -1,12 +1,13 @@
 import { useLocation, useNavigate } from "react-router-dom"
 import { useState } from "react"
+import BackButton from "../components/BackButton"
 
 function Boletos() {
   const navigate = useNavigate()
   const location = useLocation()
 
-  // Recibimos el título desde la navegación (ej. cuando vienes de Alimentos o Detalle)
-  const seleccion = location.state?.pelicula || location.state?.producto || null
+  // Solo película (desde Detalle). Los alimentos van a /alimentos/pedido.
+  const seleccion = location.state?.pelicula ?? null
 
   const [formulario, setFormulario] = useState({
     nombre: "",
@@ -32,16 +33,22 @@ function Boletos() {
 
   return (
     <>
+      <div className="page-barra-volver">
+        <BackButton fallback="/" />
+      </div>
+
       <h2 className="pagina-titulo">Compra de Boletos</h2>
 
       <section className="seccion">
         {seleccion ? (
-          <p style={{ textAlign: "center", marginBottom: 16, color: "var(--color-texto-secundario)" }}>
-            Selección: <strong style={{ color: "var(--color-secundario)" }}>{seleccion}</strong>
+          <p className="boletos-seleccion-texto">
+            Película:{" "}
+            <strong className="boletos-seleccion-nombre">{seleccion}</strong>
           </p>
         ) : (
-          <p style={{ textAlign: "center", marginBottom: 16, color: "var(--color-texto-secundario)" }}>
-            Selecciona una película o alimento para continuar.
+          <p className="boletos-seleccion-texto boletos-seleccion-vacio">
+            Elige una película en Cartelera o en Inicio y pulsa &quot;Comprar boletos&quot; para
+            asociar la función a tu compra.
           </p>
         )}
 

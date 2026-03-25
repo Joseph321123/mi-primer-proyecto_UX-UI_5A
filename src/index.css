@@ -1,12 +1,14 @@
 :root {
-  --color-primario: #141432;
-  --color-secundario: #c9a84c;
+  /* Tema claro: fondo blanco, textos oscuros (antes el sitio era azul oscuro) */
+  --color-primario: #1a1a2e;
+  --color-header-fondo: #ffffff;
+  --color-secundario: #e63946;
   --color-acento: #e63946;
-  --color-fondo: #0b0b1a;
-  --color-fondo-card: #1c1c3a;
-  --color-texto: #ffffff;
-  --color-texto-secundario: #b0b0b0;
-  --color-borde: #2a2a4a;
+  --color-fondo: #ffffff;
+  --color-fondo-card: #f3f3f7;
+  --color-texto: #1a1a1a;
+  --color-texto-secundario: #5c5c5c;
+  --color-borde: #d0d0dc;
 
   --font-titulo: 'Segoe UI', 'Arial Black', sans-serif;
   --font-texto: 'Segoe UI', Arial, sans-serif;
@@ -31,6 +33,10 @@ body {
 a {
   color: var(--color-secundario);
   text-decoration: none;
+}
+
+a:hover {
+  color: #c12a35;
 }
 
 img {

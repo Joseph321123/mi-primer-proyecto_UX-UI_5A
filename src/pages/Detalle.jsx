@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { useNavigate, useParams } from "react-router-dom"
+import BackButton from "../components/BackButton"
 
 function Detalle() {
   const navigate = useNavigate()
@@ -23,6 +24,10 @@ function Detalle() {
 
   return (
     <main className="detalle-pagina">
+      <div className="page-barra-volver">
+        <BackButton fallback="/cartelera" />
+      </div>
+
       {cargando ? (
         <p className="texto-cargando">Cargando detalle...</p>
       ) : pelicula ? (

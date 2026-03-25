@@ -1,8 +1,9 @@
 /* ===== HEADER ===== */
 .header {
   width: 100%;
-  background-color: var(--color-primario);
-  border-bottom: 2px solid var(--color-secundario);
+  background-color: var(--color-header-fondo);
+  border-bottom: 2px solid var(--color-borde);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
 }
 
 .header-contenido {
@@ -29,7 +30,7 @@
 
 .header-link {
   cursor: pointer;
-  color: var(--color-texto);
+  color: var(--color-primario);
   font-weight: 500;
   transition: color 0.3s;
   font-size: 1rem;
@@ -84,13 +85,13 @@
   border: 1px solid var(--color-borde);
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .movie-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 6px 16px rgba(201, 168, 76, 0.2);
+  box-shadow: 0 6px 16px rgba(230, 57, 70, 0.25);
 }
 
 .movie-card-img {
@@ -118,13 +119,13 @@
   border: 1px solid var(--color-borde);
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .food-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 6px 16px rgba(201, 168, 76, 0.2);
+  box-shadow: 0 6px 16px rgba(230, 57, 70, 0.25);
 }
 
 .food-card-img {
@@ -159,7 +160,7 @@
   border: 1px solid var(--color-borde);
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   padding: 24px;
   text-align: center;
   transition: transform 0.3s, box-shadow 0.3s;
@@ -167,7 +168,7 @@
 
 .otro-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 6px 16px rgba(201, 168, 76, 0.2);
+  box-shadow: 0 6px 16px rgba(230, 57, 70, 0.25);
 }
 
 .otro-card h3 {
@@ -187,7 +188,7 @@
 .btn {
   padding: 8px 20px;
   background-color: var(--color-acento);
-  color: var(--color-texto);
+  color: #ffffff;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -217,7 +218,7 @@
   line-height: 1.5;
   margin-top: 8px;
   padding: 8px;
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: rgba(0, 0, 0, 0.05);
   border-radius: 4px;
 }
 
@@ -232,7 +233,7 @@
 
 .btn-secundario:hover {
   background-color: var(--color-secundario);
-  color: var(--color-primario);
+  color: #ffffff;
 }
 
 /* ===== BOTÓN FAVORITO ===== */
@@ -254,7 +255,7 @@
 
 .btn-favorito.activo {
   background-color: var(--color-secundario);
-  color: var(--color-primario);
+  color: #ffffff;
   border-color: var(--color-secundario);
   font-weight: 600;
 }
@@ -268,7 +269,7 @@
 
 .favorito-tag {
   background-color: var(--color-secundario);
-  color: var(--color-primario);
+  color: #ffffff;
   padding: 6px 14px;
   border-radius: 20px;
   font-size: 0.85rem;
@@ -379,6 +380,139 @@
   margin: 0 auto;
 }
 
+/* ===== VOLVER (todas las páginas) ===== */
+.page-barra-volver {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 16px 0;
+}
+
+.btn-volver {
+  background-color: transparent;
+  border: 1px solid var(--color-borde);
+  color: var(--color-texto);
+  margin-top: 0;
+}
+
+.btn-volver:hover {
+  border-color: var(--color-secundario);
+  color: var(--color-secundario);
+  background-color: rgba(0, 0, 0, 0.04);
+  transform: none;
+}
+
+/* ===== CARRUSEL (ancho completo, sin deformar imagen; letterbox negro) ===== */
+.movie-carousel-seccion {
+  width: 100%;
+  margin: 0 auto;
+  padding: 8px 0 24px;
+}
+
+.movie-carousel-seccion-titulo {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 16px;
+  margin-bottom: 12px;
+}
+
+.movie-carousel-wrap {
+  width: 100%;
+}
+
+.movie-carousel-swiper {
+  width: 100%;
+}
+
+.movie-carousel-swiper .swiper-button-next,
+.movie-carousel-swiper .swiper-button-prev {
+  color: #ffffff;
+}
+
+.movie-card--carousel {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.movie-card-carousel-stage {
+  width: 100%;
+  /* Misma altura visual que antes con ancho ~420px y ratio 2:3 en poster */
+  height: 630px;
+  background-color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.movie-card-carousel-img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
+}
+
+.movie-card-body--carousel {
+  padding-top: 12px;
+}
+
+/* Detalle alimento: metadatos legibles */
+.detalle-alimento-meta {
+  color: var(--color-texto-secundario);
+  margin-bottom: 12px;
+}
+
+/* Boletos: texto de selección */
+.boletos-seleccion-texto {
+  text-align: center;
+  margin-bottom: 16px;
+  color: var(--color-texto-secundario);
+  line-height: 1.5;
+  padding: 0 12px;
+}
+
+.boletos-seleccion-nombre {
+  color: var(--color-secundario);
+}
+
+.boletos-seleccion-vacio {
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ===== PEDIDO ALIMENTOS (solo barra, sin boletos) ===== */
+.pedido-alimento-resumen {
+  text-align: center;
+  margin-bottom: 12px;
+  color: var(--color-texto);
+  font-size: 1.05rem;
+}
+
+.pedido-alimento-nombre {
+  color: var(--color-secundario);
+}
+
+.pedido-alimento-precio {
+  color: var(--color-texto-secundario);
+}
+
+.pedido-alimento-ayuda {
+  text-align: center;
+  color: var(--color-texto-secundario);
+  font-size: 0.95rem;
+  max-width: 520px;
+  margin: 0 auto 24px;
+  line-height: 1.5;
+}
+
+.pedido-alimento-sin-producto {
+  text-align: center;
+}
+
 /* ===== RESPONSIVO ===== */
 @media (max-width: 768px) {
   .header-contenido {
@@ -415,6 +549,10 @@
 
   .pagina-titulo {
     font-size: 1.5rem;
+  }
+
+  .movie-card-carousel-stage {
+    height: min(70vh, 520px);
   }
 }
 

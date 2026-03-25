@@ -1,9 +1,34 @@
 import { useState } from "react"
 import Button from "./Button"
 
-function MovieCard({ title, image, descripcion, onVerDetalle, esFavorito, onToggleFavorito }) {
+function MovieCard({
+  title,
+  image,
+  descripcion,
+  onVerDetalle,
+  esFavorito,
+  onToggleFavorito,
+  variant = "default"
+}) {
   // useState #2: Mostrar/ocultar descripción
   const [mostrarDescripcion, setMostrarDescripcion] = useState(false)
+
+  if (variant === "carousel") {
+    return (
+      <div className="movie-card movie-card--carousel">
+        <div className="movie-card-carousel-stage">
+          <img
+            src={image}
+            alt={title}
+            className="movie-card-carousel-img"
+          />
+        </div>
+        <div className="movie-card-body movie-card-body--carousel">
+          <h3>{title}</h3>
+        </div>
+      </div>
+    )
+  }
 
   return (
     <div className="movie-card">

@@ -6,7 +6,8 @@ function Header() {
 
   const esActivo = (ruta) =>
     location.pathname === ruta ||
-    (ruta === "/cartelera" && location.pathname.startsWith("/pelicula/"))
+    (ruta === "/cartelera" && location.pathname.startsWith("/pelicula/")) ||
+    (ruta === "/alimentos" && location.pathname.startsWith("/alimentos"))
 
   return (
     <header className="header">

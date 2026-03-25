@@ -6,24 +6,28 @@ import "swiper/css/navigation"
 
 import MovieCard from "./MovieCard"
 
-function MovieCarousel({movies}){
-    return(
-        <Swiper
+function MovieCarousel({ movies }) {
+  return (
+    <div className="movie-carousel-wrap">
+      <Swiper
+        className="movie-carousel-swiper"
         modules={[Navigation]}
         navigation
         slidesPerView={1}
-        spaceBetween={10}
-        >
-            {movies.map((movie, index) => (
-                <SwiperSlide key={movie.id ?? movie.title ?? index}>
-                    <MovieCard
-                    title={movie.title}
-                    image={movie.image}
-                    />
-                </SwiperSlide>
-            ))}
-        </Swiper>
-    )
+        spaceBetween={0}
+      >
+        {movies.map((movie, index) => (
+          <SwiperSlide key={movie.id ?? movie.title ?? index}>
+            <MovieCard
+              title={movie.title}
+              image={movie.image}
+              variant="carousel"
+            />
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </div>
+  )
 }
 
 export default MovieCarousel
